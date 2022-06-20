@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %} Queries {% endblock %}
+
+{% block content %}
+
+  <h1>Queries</h1>
+  {% for query in queries %}
+  <div class="card p-2 m-2">
+    <p>{{ query.name }} -
+        {% if query.status == 'ready' %}
+        <a href="/plot/{{query.id}}">
+        {% endif %}
+            {{ query.status }}
+
+        {% if query.status == 'ready' %}
+        </a>
+        {% endif %}
+        <a href="/query/{{query.id}}/delete">Delete</a>
+    </p>
+  </div>
+  {% endfor %}
+  <a class="btn btn-success" href="/">New query</a>
+{% endblock %}

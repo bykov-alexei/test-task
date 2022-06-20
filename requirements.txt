@@ -1,0 +1,9 @@
+flask
+flasgger
+celery
+mysql
+peewee
+redis
+pandas
+plotly
+openpyxl

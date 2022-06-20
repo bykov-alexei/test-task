@@ -1,0 +1,4 @@
+mysql-data/
+static/
+.idea/
+*__pycache__*
