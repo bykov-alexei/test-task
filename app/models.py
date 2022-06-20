@@ -69,7 +69,7 @@ def process_file(id):
     try:
         try:
             data = pd.read_excel(os.path.join('static', filename))
-        except UnicodeDecodeError as e:
+        except ValueError as e:
             data = pd.read_csv(os.path.join('static', filename))
         data.columns = ['stock', 'date', 'open', 'high', 'low', 'close']
         data.date = pd.to_datetime(data.date)
